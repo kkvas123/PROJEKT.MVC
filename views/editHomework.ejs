@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head.ejs')%>
+<body>
+    <h1>Edit Homework</h1>
+    <form action="/editHomework/<%= homework.id %>" method="POST">
+        <label for="description">Description:</label><br>
+        <input type="text" id="description" name="description" value="<%= homework.description %>"><br>
+        <label for="deadline">Deadline:</label><br>
+        <input type="date" id="deadline" name="deadline" value="<%= homework.deadline %>"><br>
+        <label for="status">Status:</label><br>
+        <select id="status" name="status">
+            <option value="To Do" <% if (homework.status === 'To Do') { %>selected<% } %>>To Do</option>
+            <option value="Done" <% if (homework.status === 'Done') { %>selected<% } %>>Done</option>
+        </select><br>
+        <button type="submit">Update Homework</button>
+    </form>
+</body>
+</html>
+

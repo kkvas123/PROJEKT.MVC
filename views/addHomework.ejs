@@ -1,0 +1,15 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head.ejs')%>
+<body>
+    <h1>Add New Homework</h1>
+    <form action="/addHomework" method="POST">
+        <label for="description">Description:</label><br>
+        <input type="text" id="description" name="description"><br>
+        <label for="deadline">Deadline:</label><br>
+        <input type="date" id="deadline" name="deadline"><br>
+        <button type="submit">Add Homework</button>
+    </form>
+</body>
+</html>

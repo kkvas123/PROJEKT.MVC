@@ -1,0 +1,19 @@
+ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    margin-top: 10px;
+}
+
+.homework-item {
+    margin-bottom: 20px; 
+}
+
+.homework-item a {
+    margin-left: 10px;
+}

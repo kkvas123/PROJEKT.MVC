@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head.ejs')%>
+<body>
+    <h1>Homework List</h1>
+    <a href="/addHomework">Add New Homework</a>
+    <% homeworks.forEach(homework => { %>
+        <div style="margin-bottom: 20px;">
+            <strong style="font-size: 1.2em;"><%= homework.description %></strong>
+            <span style="margin-left: 20px;"><a href="/editHomework/<%= homework.id %>">Edit</a></span>
+            <div style="margin-top: 10px;">Deadline: <%= homework.deadline %> <br> Status: <%= homework.status %></div>
+        </div>
+    <% }); %>
+</body>
+</html>
