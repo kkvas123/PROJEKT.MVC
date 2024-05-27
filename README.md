@@ -18,6 +18,6 @@ Projekt polega na utworzeniu aplikacji webowej umożliwiającej użytkownikom za
 ### Instrukcja obsługi
 Aby uruchomić aplikację, wykonaj następujące kroki:
 1. Sklonuj repozytorium z GitHub.
-2. Zainstaluj Node.js, Express.js oraz EJS.
+2. Zainstaluj Node.js, Express.js, EJS oraz Bootstrap.
 3. Uruchom serwer, wykonując polecenie `node app.js`.
 4. Aplikacja będzie dostępna pod adresem http://localhost:3000.
