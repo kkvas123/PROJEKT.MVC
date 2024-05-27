@@ -2,14 +2,31 @@
 <html lang="en">
     <%- include('partials/head.ejs')%>
 <body>
-    <h1>Homework List</h1>
-    <a href="/addHomework">Add New Homework</a>
-    <% homeworks.forEach(homework => { %>
-        <div style="margin-bottom: 20px;">
-            <strong style="font-size: 1.2em;"><%= homework.description %></strong>
-            <span style="margin-left: 20px;"><a href="/editHomework/<%= homework.id %>">Edit</a></span>
-            <div style="margin-top: 10px;">Deadline: <%= homework.deadline %> <br> Status: <%= homework.status %></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="oswald mt-4">Homework List</h1>
+                <a href="/addHomework" class="btn btn-primary mb-3 oswald">Add New Homework</a>
+                <% homeworks.forEach(homework => { %>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title oswald"><%= homework.description %></h5>
+                            <p class="card-text oswald">
+                                <strong>Deadline:</strong> <%= homework.deadline %><br>
+                                <strong>Status:</strong> <%= homework.status %>
+                            </p>
+                            <a href="/editHomework/<%= homework.id %>" class="btn btn-secondary oswald">Edit</a>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+            <div class="col-md-4">
+                <img src="/images/frog.png" class="float-right mt-4" alt="Frog Image" style="max-width: 200px;">
+            </div>
         </div>
-    <% }); %>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
